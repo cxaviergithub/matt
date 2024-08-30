@@ -142,6 +142,22 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <listViews>
+        <fullName>All_Buyer_Groups</fullName>
+        <columns>Name</columns>
+        <columns>Owner</columns>
+        <columns>Description</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Buyer Groups</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Buyer_Groups</fullName>
+        <columns>Name</columns>
+        <columns>Owner</columns>
+        <columns>Description</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Buyer Groups</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Description</customTabListAdditionalFields>
         <customTabListAdditionalFields>Owner</customTabListAdditionalFields>

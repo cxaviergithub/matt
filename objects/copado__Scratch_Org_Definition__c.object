@@ -204,6 +204,16 @@
         <visibleLines>3</visibleLines>
     </fields>
     <label>Scratch Org Definition</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>copado__Developer_Hub_Org__c</columns>
+        <columns>copado__Duration_in_days__c</columns>
+        <columns>copado__Scratch_Org_Definition_JSON__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Scratch Org Definitions Name</label>
         <trackHistory>false</trackHistory>

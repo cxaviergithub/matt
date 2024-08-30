@@ -142,6 +142,13 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__PackageVersionCompactLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__PackageVersionCompactLayout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Version_number__c</fields>
+        <label>Package Version Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -155,6 +162,111 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>cmcSf__SFDX_Extension_Fields</fullName>
+        <description>Fields containing SFDX extension specific information.</description>
+        <displayedFields>
+            <field>copado__Package_Version_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Subscriber_Version_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Has_Installation_Key__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Is_released__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__LastJobExecutionId__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Post_Install_Script__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Uninstall_Script__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Release_Notes_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__User_Story__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Version__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Ancestor_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Ancestor_Version__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__View_In_Git__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Post_Install_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Skip_Validation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>cmcSf__Code_Coverage__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Data_JSON__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Production_Installation_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Sandbox_Installation_URL__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>SFDX Extension Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>cmcSf__SFDX_PackageVersion_CustomFields</fullName>
+        <description>Display Custom Fields in Package Version Lightning Page in SFDX</description>
+        <label>SFDX Package Version Lightning Page</label>
+    </fieldSets>
     <fields>
         <fullName>cmcSf__Ancestor_Id__c</fullName>
         <deprecated>false</deprecated>
@@ -574,5 +686,59 @@
         <searchResultsAdditionalFields>copado__Release__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>cmcSf__Api_Version_Format</fullName>
+        <active>true</active>
+        <errorConditionFormula>copado__Artifact__r.RecordType.DeveloperName = &apos;Package_Artifact&apos;  &amp;&amp; ISPICKVAL(copado__Artifact__r.copado__Pipeline__r.copado__Platform__c, &apos;SFDX&apos;) &amp;&amp; NOT(ISBLANK(cmcSf__Api_Version__c)) &amp;&amp; NOT(REGEX(cmcSf__Api_Version__c, &quot;^\\d*.0&quot;))</errorConditionFormula>
+        <errorDisplayField>cmcSf__Api_Version__c</errorDisplayField>
+        <errorMessage>The API version specified is not valid. It must be in the format, Number.0</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cmcSf__Package_Version_Number_Format</fullName>
+        <active>true</active>
+        <description>Version Number should be in the format Major. Minor. Patch. Build.</description>
+        <errorConditionFormula>copado__Artifact__r.RecordType.DeveloperName = &apos;Package_Artifact&apos;  &amp;&amp;  ISPICKVAL( copado__Artifact__r.copado__Pipeline__r.copado__Platform__c , &quot;SFDX&quot;)  &amp;&amp; NOT(ISBLANK(copado__Version_number__c)) &amp;&amp; NOT(REGEX(copado__Version_number__c, &quot;^\\d+\\.\\d+\\.\\d+\\.(\\d+|NEXT)$&quot;))</errorConditionFormula>
+        <errorDisplayField>copado__Version_number__c</errorDisplayField>
+        <errorMessage>The Package version number specified is not valid. It must be in the format,  {whole number}.{whole number}.{whole number}.{whole number} or {whole number}.{whole number}.{whole number}.NEXT</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cmcSf__Tag_Restriction</fullName>
+        <active>true</active>
+        <description>Tag should be in valid format as per Git documentation</description>
+        <errorConditionFormula>AND( copado__Artifact__r.RecordType.DeveloperName = &apos;Package_Artifact&apos;,
+ISPICKVAL(copado__Artifact__r.copado__Pipeline__r.copado__Platform__c, &apos;SFDX&apos;) , OR(REGEX( copado__Tag__c ,&quot;(.*[\\?\\*\\~\\^\\:\\[\\s\\\\].*)&quot;), 
+REGEX(copado__Tag__c, &quot;^(/).*&quot;),
+REGEX(copado__Tag__c, &quot;.*[/.]$&quot;), 
+REGEX(copado__Tag__c, &quot;.*(.lock)$&quot;), 
+REGEX(copado__Tag__c, &quot;.*(\\@\\{).*&quot;),
+REGEX(copado__Tag__c, &quot;.*(\\/\\/).*&quot;),
+REGEX(copado__Tag__c, &quot;.*(\\/\\.).*&quot;),
+REGEX(copado__Tag__c, &quot;.*(\\.\\.).*&quot;)
+))</errorConditionFormula>
+        <errorDisplayField>copado__Tag__c</errorDisplayField>
+        <errorMessage>The Tag field is used to create a Git tag during package version creation. Ensure there are no spaces or character sequences that are not allowed for the Git tag. For more details, review the Git documentation https://git-scm.com/docs/git-check-ref-format</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Merge_Version</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Merge Version</masterLabel>
+        <openType>noSidebar</openType>
+        <page>copado__MergeVersion</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>copado__Promote_Beta_to_Released</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Promote Beta to Released</masterLabel>
+        <openType>sidebar</openType>
+        <page>copado__PromoteBetatoReleased</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

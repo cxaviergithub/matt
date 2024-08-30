@@ -91,6 +91,11 @@
         <fullName>NamespacePrefix</fullName>
         <trackHistory>true</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_Namespace_Registries</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Namespace Registries</label>
+    </listViews>
     <searchLayouts>
         <searchResultsAdditionalFields>NamespacePrefix</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CreatedDate</searchResultsAdditionalFields>

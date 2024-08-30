@@ -108,6 +108,14 @@
         <fullName>AppliedDate</fullName>
     </fields>
     <fields>
+        <fullName>AssociatedAccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssociatedPaymentLineId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Comments</fullName>
     </fields>
     <fields>
@@ -115,6 +123,9 @@
     </fields>
     <fields>
         <fullName>EffectiveDate</fullName>
+    </fields>
+    <fields>
+        <fullName>EffectiveImpactAmount</fullName>
     </fields>
     <fields>
         <fullName>HasBeenUnapplied</fullName>
@@ -127,10 +138,22 @@
         <type>MasterDetail</type>
     </fields>
     <fields>
+        <fullName>PaymentBalance</fullName>
+    </fields>
+    <fields>
+        <fullName>PaymentId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Type</fullName>
     </fields>
     <fields>
         <fullName>UnappliedDate</fullName>
     </fields>
+    <listViews>
+        <fullName>PaymentLineInvoice</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

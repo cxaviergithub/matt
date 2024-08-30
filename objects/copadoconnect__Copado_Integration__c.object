@@ -142,6 +142,15 @@
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>copadoconnect__Copado_Integration_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copadoconnect__Copado_Integration_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copadoconnect__Provider__c</fields>
+        <fields>copadoconnect__Project__c</fields>
+        <fields>copadoconnect__Connection_Status__c</fields>
+        <fields>copadoconnect__Integration_Status__c</fields>
+        <label>Copado Integration Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -154,6 +163,31 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>copadoconnect__ConnectionDetailFieldSet</fullName>
+        <description>Used on Connection Details Card</description>
+        <displayedFields>
+            <field>copadoconnect__Named_Credential__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoconnect__External_Project_Key__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoconnect__Connection_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copadoconnect__Integration_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>ConnectionDetailFieldSet</label>
+    </fieldSets>
     <fields>
         <fullName>copadoconnect__Connection_Status__c</fullName>
         <deprecated>false</deprecated>
@@ -304,12 +338,31 @@
         </valueSet>
     </fields>
     <label>Copado Integration</label>
+    <listViews>
+        <fullName>copadoconnect__All</fullName>
+        <columns>NAME</columns>
+        <columns>copadoconnect__Provider__c</columns>
+        <columns>copadoconnect__Project__c</columns>
+        <columns>copadoconnect__Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>copadoconnect__All_Copado_Integrations</fullName>
+        <columns>NAME</columns>
+        <columns>copadoconnect__Provider__c</columns>
+        <columns>copadoconnect__Project__c</columns>
+        <columns>copadoconnect__Connection_Status__c</columns>
+        <columns>copadoconnect__Integration_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Copado Integrations</label>
+    </listViews>
     <nameField>
         <label>Connection Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Copado Integrations</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

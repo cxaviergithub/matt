@@ -133,11 +133,17 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>City</fullName>
+    </fields>
+    <fields>
         <fullName>CompanyOrAccount</fullName>
     </fields>
     <fields>
         <fullName>ContactId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country</fullName>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -152,6 +158,9 @@
         <fullName>Fax</fullName>
     </fields>
     <fields>
+        <fullName>FirstName</fullName>
+    </fields>
+    <fields>
         <fullName>FirstRespondedDate</fullName>
     </fields>
     <fields>
@@ -162,6 +171,9 @@
     </fields>
     <fields>
         <fullName>HasResponded</fullName>
+    </fields>
+    <fields>
+        <fullName>LastName</fullName>
     </fields>
     <fields>
         <fullName>LeadId</fullName>
@@ -178,12 +190,21 @@
         <fullName>Phone</fullName>
     </fields>
     <fields>
+        <fullName>PostalCode</fullName>
+    </fields>
+    <fields>
         <fullName>Salutation</fullName>
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>State</fullName>
+    </fields>
+    <fields>
         <fullName>Status</fullName>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street</fullName>
     </fields>
     <fields>
         <fullName>Title</fullName>

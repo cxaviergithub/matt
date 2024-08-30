@@ -142,6 +142,17 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Hover_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__API_Name__c</fields>
+        <fields>copado__Is_Sensitive__c</fields>
+        <fields>copado__ParentId__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__User__c</fields>
+        <label>Hover Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>This is the pipeline/environment/user specific system properties.</description>
@@ -262,6 +273,21 @@
         <visibleLines>3</visibleLines>
     </fields>
     <label>System Property</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__API_Name__c</columns>
+        <columns>copado__Value__c</columns>
+        <columns>copado__Is_Sensitive__c</columns>
+        <columns>copado__Pipeline__c</columns>
+        <columns>copado__Environment__c</columns>
+        <columns>copado__User__c</columns>
+        <columns>copado__ParentId__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Property Name</label>
         <type>Text</type>
@@ -318,5 +344,43 @@
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>copado__API_Name_Cannot_Contain_Spaces</fullName>
+        <active>true</active>
+        <errorConditionFormula>CONTAINS(copado__API_Name__c, &apos; &apos;)</errorConditionFormula>
+        <errorDisplayField>copado__API_Name__c</errorDisplayField>
+        <errorMessage>The API Name cannot contain blank spaces.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Lookups_empty_for_Global_Property</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+copado__Is_Global__c = True,
+OR(
+NOT(ISBLANK(copado__User__c)),
+NOT(ISBLANK(copado__Pipeline__c)),
+NOT(ISBLANK(copado__Environment__c))
+))</errorConditionFormula>
+        <errorMessage>The environment, pipeline, and user lookups must be empty if the &apos;Is Global&apos; checkbox is selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Only_One_Parent_Is_Allowed</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND(
+NOT(ISBLANK(copado__Environment__c)),
+NOT(ISBLANK(copado__Pipeline__c))
+),
+AND(
+NOT(ISBLANK(copado__Environment__c)),
+NOT(ISBLANK(copado__User__c))
+),
+AND(
+NOT(ISBLANK(copado__User__c)),
+NOT(ISBLANK(copado__Pipeline__c))
+)
+)</errorConditionFormula>
+        <errorMessage>A non-global property can only be related to one parent: Environment, Pipeline, or User.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

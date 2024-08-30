@@ -135,6 +135,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Comment</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>ImpactLevel</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>

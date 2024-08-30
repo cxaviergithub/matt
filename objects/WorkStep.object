@@ -191,6 +191,11 @@
         <fullName>ParentRecordType</fullName>
     </fields>
     <fields>
+        <fullName>PausedFlowInterviewId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>StartTime</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -207,6 +212,14 @@
         <fullName>WorkOrderId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WorkOrderLineItemId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WorkPlanExecutionOrder</fullName>
     </fields>
     <fields>
         <fullName>WorkPlanId</fullName>

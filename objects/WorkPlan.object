@@ -160,6 +160,11 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>WorkOrderLineItemId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>WorkPlanTemplateId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

@@ -147,6 +147,6 @@
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>Private</sharingModel>
 </CustomObject>

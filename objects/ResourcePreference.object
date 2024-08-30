@@ -139,6 +139,10 @@
         <type>MasterDetail</type>
     </fields>
     <fields>
+        <fullName>ResourcePreferenceNumber</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>ServiceResourceId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

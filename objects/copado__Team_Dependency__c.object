@@ -142,6 +142,14 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__User_Story_Dependency_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__User_Story_Dependency_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Provider_User_Story__c</fields>
+        <fields>copado__Relationship_Type__c</fields>
+        <fields>copado__Dependent_User_Story__c</fields>
+        <label>User Story Dependency Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
@@ -398,6 +406,20 @@
         <type>Checkbox</type>
     </fields>
     <label>User Story Dependency</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Provider_User_Story__c</columns>
+        <columns>copado__Parent_User_Story_Status__c</columns>
+        <columns>copado__Dependent_User_Story__c</columns>
+        <columns>copado__Child_User_Story_Status__c</columns>
+        <columns>copado__Dependency_Status__c</columns>
+        <columns>copado__Dependent_Team__c</columns>
+        <columns>copado__Provider_Team__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <displayFormat>UD-{0000000}</displayFormat>
         <label>User Story Dependency Name</label>

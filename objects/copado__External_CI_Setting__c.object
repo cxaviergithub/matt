@@ -202,6 +202,15 @@
         <unique>false</unique>
     </fields>
     <label>External CI Setting</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__CI_Tool__c</columns>
+        <columns>copado__Endpoint__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <label>External CI Settings Name</label>
         <type>Text</type>

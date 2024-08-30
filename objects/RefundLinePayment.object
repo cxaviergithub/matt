@@ -108,6 +108,14 @@
         <fullName>AppliedDate</fullName>
     </fields>
     <fields>
+        <fullName>AssociatedAccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssociatedRefundLinePaymentId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Comments</fullName>
     </fields>
     <fields>
@@ -117,10 +125,27 @@
         <fullName>EffectiveDate</fullName>
     </fields>
     <fields>
+        <fullName>EffectiveImpactAmount</fullName>
+    </fields>
+    <fields>
         <fullName>HasBeenUnapplied</fullName>
     </fields>
     <fields>
         <fullName>ImpactAmount</fullName>
+    </fields>
+    <fields>
+        <fullName>PaymentBalance</fullName>
+    </fields>
+    <fields>
+        <fullName>PaymentId</fullName>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>RefundBalance</fullName>
+    </fields>
+    <fields>
+        <fullName>RefundId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Type</fullName>
@@ -128,5 +153,10 @@
     <fields>
         <fullName>UnappliedDate</fullName>
     </fields>
+    <listViews>
+        <fullName>RefundLinePayment</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

@@ -232,6 +232,17 @@
         <unique>false</unique>
     </fields>
     <label>Sprint Snapshot</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Sprint__c</columns>
+        <columns>copado__Date__c</columns>
+        <columns>copado__Expected_Story_Point__c</columns>
+        <columns>copado__Total_Story_Point__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <displayFormat>BI - {0000000}</displayFormat>
         <label>Burndown Item  Name</label>

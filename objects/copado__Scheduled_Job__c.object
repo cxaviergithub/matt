@@ -245,12 +245,23 @@
         <type>Url</type>
     </fields>
     <label>Scheduled Job</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Run_as_User__c</columns>
+        <columns>copado__Message__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <label>Scheduled Job Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Scheduled Jobs</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

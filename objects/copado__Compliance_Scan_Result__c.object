@@ -155,6 +155,66 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>copado__Compliance_Result_Tab</fullName>
+        <availableFields>
+            <field>copado__Deployment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Org_Credential__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>In Copado Pipeline Promotion page</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__User_Story__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Resolution_Details__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Findings__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Highest_Severity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Highest_Rule_Action__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Compliance_Result_Tab</label>
+    </fieldSets>
     <fields>
         <fullName>copado__Deployment_Step__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
@@ -364,6 +424,19 @@
         <type>Lookup</type>
     </fields>
     <label>Compliance Scan Result</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Findings__c</columns>
+        <columns>copado__Environment__c</columns>
+        <columns>copado__Highest_Severity__c</columns>
+        <columns>copado__Highest_Rule_Action__c</columns>
+        <columns>copado__Scan_Duration_in_Minutes__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <displayFormat>Scan Result - {000000000}</displayFormat>
         <label>Scan Result Reference</label>
@@ -372,6 +445,140 @@
     </nameField>
     <pluralLabel>Compliance Scan Results</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>copado__Copado</fullName>
+        <active>true</active>
+        <description>This record type is used for scan results produced by Copado.</description>
+        <label>Copado</label>
+        <picklistValues>
+            <picklist>copado__Highest_Rule_Action__c</picklist>
+            <values>
+                <fullName>Abort Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continue with alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Highest_Severity__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Status__c</picklist>
+            <values>
+                <fullName>Completed - Findings detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - No Findings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Under Investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__Other</fullName>
+        <active>true</active>
+        <description>Use this record type to capture non-Salesforce scan results.</description>
+        <label>Other</label>
+        <picklistValues>
+            <picklist>copado__Highest_Rule_Action__c</picklist>
+            <values>
+                <fullName>Abort Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continue with alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Highest_Severity__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Status__c</picklist>
+            <values>
+                <fullName>Completed - Findings detected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - No Findings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed - Resolved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Under Investigation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Scan_Start__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Scan_End__c</customTabListAdditionalFields>

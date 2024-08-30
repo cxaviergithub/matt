@@ -116,6 +116,10 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
+        <fullName>AreQualItemsExclFromDiscounts</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>CampaignId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -125,11 +129,26 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>DiscountOrder</fullName>
+        <inlineHelpText>Select whether to apply discounts to the most expensive or least expensive products first.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DiscountRestriction</fullName>
+        <inlineHelpText>Restrict which products can be discounted.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>DisplayName</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>EndDateTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ExclusivityType</fullName>
+        <inlineHelpText>To combine the promotion with other promotions, select No. To prevent combining the promotion with promotions of the same class, select Class. To let it be the only promotion used for an entire order, select Global.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -142,6 +161,15 @@
     </fields>
     <fields>
         <fullName>IsCommercePromotion</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsQualCriteriaNotRequiredPerApplication</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>IsTiered</fullName>
+        <inlineHelpText>This setting is permanent and can&apos;t be changed after the promotion is saved. Create a new promotion instead.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -173,6 +201,11 @@
     </fields>
     <fields>
         <fullName>StartDateTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TargetCriteria</fullName>
+        <inlineHelpText>Define whether a cart must meet the criteria for any target or all targets.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>

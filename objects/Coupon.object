@@ -164,6 +164,11 @@
         <fullName>Status</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>ALL_Coupons</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Coupons</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>CouponCode</customTabListAdditionalFields>
         <customTabListAdditionalFields>Description</customTabListAdditionalFields>

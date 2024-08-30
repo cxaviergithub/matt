@@ -115,6 +115,10 @@
         <fullName>Features</fullName>
     </fields>
     <fields>
+        <fullName>Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>LastLoginDate</fullName>
     </fields>
     <fields>
@@ -151,5 +155,15 @@
     <fields>
         <fullName>Snapshot</fullName>
     </fields>
+    <listViews>
+        <fullName>All_Active_Scratch_Orgs</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Active Scratch Orgs</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Active_Scratch_Orgs</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Active Scratch Orgs</label>
+    </listViews>
     <sharingModel>Private</sharingModel>
 </CustomObject>

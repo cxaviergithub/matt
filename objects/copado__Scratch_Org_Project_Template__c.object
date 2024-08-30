@@ -417,13 +417,25 @@
         <type>Lookup</type>
     </fields>
     <label>Scratch Org Project Template</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Developer_Hub_Org__c</columns>
+        <columns>copado__Source_Org_Credential__c</columns>
+        <columns>copado__Api_Version__c</columns>
+        <columns>copado__SFDC_Login_Url__c</columns>
+        <columns>copado__Namespace__c</columns>
+        <columns>copado__Project_JSON__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Scratch Org Artifacts Template Name</label>
         <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Scratch Org Project Templates</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

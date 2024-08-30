@@ -101,14 +101,31 @@
         <fullName>GrossUnitPrice</fullName>
     </fields>
     <fields>
+        <fullName>IsReship</fullName>
+    </fields>
+    <fields>
         <fullName>OrderItemId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OriginalQuantity</fullName>
     </fields>
     <fields>
         <fullName>Quantity</fullName>
     </fields>
     <fields>
         <fullName>QuantityUnitOfMeasure</fullName>
+    </fields>
+    <fields>
+        <fullName>RejectReason</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RejectedQuantity</fullName>
+    </fields>
+    <fields>
+        <fullName>ReshipReason</fullName>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>ServiceDate</fullName>

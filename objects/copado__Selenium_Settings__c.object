@@ -269,6 +269,19 @@ http://USER:TOKEN@ondemand.saucelabs.com:80/wd/hub/</inlineHelpText>
         <type>Url</type>
     </fields>
     <label>Selenium Settings</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Default_Org_Credential__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>copado__Webdriver_URL__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <label>Selenium Test Provider Name</label>
         <type>Text</type>

@@ -631,6 +631,18 @@
         </valueSet>
     </fields>
     <label>Environment</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Type__c</columns>
+        <columns>copado__Minimum_Apex_Test_Coverage__c</columns>
+        <columns>copado__Org_ID__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <label>Environment Name</label>
         <type>Text</type>
@@ -657,5 +669,40 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>cmcSf__Prevent_RunSpecifiedTest_For_Environment</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(cmcSf__Apex_Test_Level__c,&apos;Run Specified Tests&apos;)</errorConditionFormula>
+        <errorMessage>We do not recommend to set “Run Specified Test” on an environment level, unless you are 100% sure that ALL deployments contain Apex. If this is the case, you can deactivate this Validation Rule.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Unique_Template_for_promote_and_deploy</fullName>
+        <active>true</active>
+        <description>An environment cannot have the same automation template for both Promote and Deploy</description>
+        <errorConditionFormula>AND(
+   NOT(ISBLANK(copado__Promotion_Override__c)),
+   copado__Promotion_Override__c == copado__Deployment_Automation_Override__c
+)</errorConditionFormula>
+        <errorDisplayField>copado__Deployment_Automation_Override__c</errorDisplayField>
+        <errorMessage>An environment cannot have the same automation template for both Promote and Deploy</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Find_Replace_Rule_Editor</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Find &amp; Replace Rule Editor</masterLabel>
+        <openType>newWindow</openType>
+        <page>copado__Environment_FindAndReplaceEditor</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
 </CustomObject>

@@ -142,6 +142,13 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Stage_Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Stage_Default</fullName>
+        <fields>Name</fields>
+        <fields>copado__Display_Name__c</fields>
+        <fields>copado__Meta_Stage__c</fields>
+        <label>Stage Default</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -185,6 +192,16 @@ Production: stage that contains environments where functionality is made availab
         </valueSet>
     </fields>
     <label>Stage</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Display_Name__c</columns>
+        <columns>copado__Meta_Stage__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Stage Name</label>
         <trackHistory>false</trackHistory>

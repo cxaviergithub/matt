@@ -142,6 +142,13 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Data_Set_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Data_Set_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Data_Template__c</fields>
+        <fields>copado__Last_Generated_Date__c</fields>
+        <label>Data Set Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Stores a set of file attachments with record data from a Data Template.</description>
@@ -232,6 +239,11 @@
         <type>Lookup</type>
     </fields>
     <label>Data Set</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Data Set Name</label>
         <trackHistory>false</trackHistory>
@@ -257,5 +269,16 @@
         <searchResultsAdditionalFields>copado__Last_Generated_Date__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Prevent_change_Data_Template</fullName>
+        <active>true</active>
+        <description>This validation rule prevents the user from changing the Data Template field once the record has been created.</description>
+        <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    ISCHANGED(copado__Data_Template__c)
+)</errorConditionFormula>
+        <errorDisplayField>copado__Data_Template__c</errorDisplayField>
+        <errorMessage>It is not allowed to change the Data Template once the Data Set has been created. Please create a new Data Set.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

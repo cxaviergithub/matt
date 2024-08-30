@@ -120,10 +120,16 @@
         <fullName>IsExternallyVisible</fullName>
     </fields>
     <fields>
+        <fullName>IsPrivateDraft</fullName>
+    </fields>
+    <fields>
         <fullName>LastOpenedDate</fullName>
     </fields>
     <fields>
         <fullName>MessageDate</fullName>
+    </fields>
+    <fields>
+        <fullName>MessageSize</fullName>
     </fields>
     <fields>
         <fullName>ParentId</fullName>

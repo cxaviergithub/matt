@@ -142,6 +142,15 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Stage_Connection_Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Stage_Connection_Default</fullName>
+        <fields>Name</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Stage__c</fields>
+        <fields>copado__Next_Stage_Connection__c</fields>
+        <fields>copado__Next_Stage__c</fields>
+        <label>Stage Connection Default</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>

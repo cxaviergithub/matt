@@ -10,6 +10,13 @@
         <fullName>Description</fullName>
     </fields>
     <fields>
+        <fullName>FulfillmentOrderItemAdjustId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rate</fullName>
+    </fields>
+    <fields>
         <fullName>TaxEffectiveDate</fullName>
     </fields>
     <fields>

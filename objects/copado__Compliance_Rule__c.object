@@ -155,6 +155,126 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>copado__Criteria_Page_Fields</fullName>
+        <availableFields>
+            <field>copado__Action__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Active__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>CreatedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Error_Message__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Filter_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Id</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>IsDeleted</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Is_Valid__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedById</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>LastModifiedDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Validation_Date_time__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Last_Validation_Status_Message__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Metadata_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Record_Count_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>copado__Record_Count__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>SystemModstamp</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>AddCCHRuleCriteria</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Matching_Criteria__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Risk_Details__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>copado__Severity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Criteria Page Fields</label>
+    </fieldSets>
     <fields>
         <fullName>copado__Action__c</fullName>
         <deprecated>false</deprecated>
@@ -359,6 +479,19 @@
         </valueSet>
     </fields>
     <label>Compliance Rule</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Active__c</columns>
+        <columns>copado__Severity__c</columns>
+        <columns>copado__Action__c</columns>
+        <columns>copado__Risk_Details__c</columns>
+        <columns>copado__Error_Message__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Compliance Rule Name</label>
         <trackHistory>false</trackHistory>
@@ -366,6 +499,154 @@
     </nameField>
     <pluralLabel>Compliance Rules</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>copado__Copado</fullName>
+        <active>true</active>
+        <description>Use this record type to define scan rules run by Copado.</description>
+        <label>Copado</label>
+        <picklistValues>
+            <picklist>copado__Action__c</picklist>
+            <values>
+                <fullName>Abort Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continue with alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Only</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Matching_Criteria__c</picklist>
+            <values>
+                <fullName>Equals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater Than</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater or Equal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less Than</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less or Equal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Equals</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Record_Count_Criteria__c</picklist>
+            <values>
+                <fullName>Number of groups</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Severity__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__Other</fullName>
+        <active>true</active>
+        <description>Use this record type to define scan rules for 3rd party systems.</description>
+        <label>Other</label>
+        <picklistValues>
+            <picklist>copado__Action__c</picklist>
+            <values>
+                <fullName>Abort Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Continue with alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Document Only</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Matching_Criteria__c</picklist>
+            <values>
+                <fullName>Equals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater Than</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Greater or Equal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less Than</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Less or Equal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Equals</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Record_Count_Criteria__c</picklist>
+            <values>
+                <fullName>Number of groups</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>copado__Severity__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Active__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Severity__c</customTabListAdditionalFields>
@@ -383,5 +664,26 @@
         <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Required_Criteria_Fields</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(
+ISPICKVAL(copado__Matching_Criteria__c ,&quot;&quot;),
+ISPICKVAL(copado__Record_Count_Criteria__c,&quot;&quot;),
+ISNULL(copado__Record_Count__c),
+ISBLANK(copado__Record_Count__c))</errorConditionFormula>
+        <errorMessage>Matching Criteria, Record Count and Record Count Criteria are required fields.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Manage_Criteria</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Criteria</masterLabel>
+        <openType>sidebar</openType>
+        <page>copado__AddCCHRuleCriteria</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

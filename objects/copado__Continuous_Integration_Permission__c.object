@@ -256,13 +256,24 @@
         <type>Lookup</type>
     </fields>
     <label>Continuous Integration Permission</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Continuous_Integration__c</columns>
+        <columns>copado__User__c</columns>
+        <columns>copado__Access__c</columns>
+        <columns>copado__Email_Notification__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <displayFormat>CIP-{00000}</displayFormat>
         <label>Permission Ref</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Continuous Integration Permissions</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

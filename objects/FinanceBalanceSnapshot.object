@@ -73,6 +73,26 @@
         <inlineHelpText>Final balance of the snapshot&apos;s reference entity. Inherited from the finance transaction&apos;s resulting balance if the finance transaction&apos;s reference entity is a credit memo, debit memo, invoice, payment, or refund.</inlineHelpText>
     </fields>
     <fields>
+        <fullName>BaseCurrencyAmount</fullName>
+        <inlineHelpText>Define this value based on any currency conversion needed for the total amount with tax.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BaseCurrencyBalance</fullName>
+        <inlineHelpText>Define this value based on any currency conversion needed for the resulting balance.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BaseCurrencyFxDate</fullName>
+        <inlineHelpText>Date used to determine the foreign exchange rate. Define this value to use later when you calculate currency conversions.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BaseCurrencyFxRate</fullName>
+        <inlineHelpText>Rate of exchange according to the Base Currency FX Date. Define this value to use later when you calculate currency conversions.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>BaseCurrencyIsoCode</fullName>
+        <inlineHelpText>Currency of the country defined for this account. Define this value to use later when you calculate currency conversions.</inlineHelpText>
+    </fields>
+    <fields>
         <fullName>ChargeAmount</fullName>
         <inlineHelpText>The charge contributing to the transaction&apos;s subtotal</inlineHelpText>
     </fields>
@@ -89,8 +109,40 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>FinanceSystemIntegrationMode</fullName>
+        <inlineHelpText>The type of the external financial system used to recognize the finance transaction.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>FinanceSystemIntegrationStatus</fullName>
+    </fields>
+    <fields>
+        <fullName>FinanceSystemName</fullName>
+        <inlineHelpText>The name of the external financial system used to recognize the finance transaction.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>FinanceSystemTransactionNumber</fullName>
+    </fields>
+    <fields>
+        <fullName>FinanceTransactionId</fullName>
+        <inlineHelpText>Parent finance transaction for the snapshot. The snapshot&apos;s fields inherit the transaction&apos;s values only if the finance transaction&apos;s reference entity type is an invoice, payment, credit memo, debit memo, or refund.</inlineHelpText>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ImpactAmount</fullName>
         <inlineHelpText>The finance transaction&apos;s impact on the customer&apos;s finances</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>LegalEntityId</fullName>
+        <inlineHelpText>Legal entity associated with the finance transaction. This is an optional lookup that you can add to associate the finance transaction to GL rules for external ledger processing.</inlineHelpText>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OriginalEventType</fullName>
+        <inlineHelpText>The finance transaction&apos;s event type when the finance transaction was created.</inlineHelpText>
+    </fields>
+    <fields>
+        <fullName>OriginalReferenceEntityType</fullName>
+        <inlineHelpText>The finance transaction&apos;s reference entity type when the finance transaction was created.</inlineHelpText>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
@@ -100,6 +152,10 @@
         <fullName>ReferenceEntityId</fullName>
         <inlineHelpText>The financial object that was created or updated as a result of a customer action</inlineHelpText>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ReferenceEntityType</fullName>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Subtotal</fullName>
@@ -117,6 +173,16 @@
         <fullName>TransactionDate</fullName>
         <inlineHelpText>The date when the finance transaction occurred</inlineHelpText>
     </fields>
+    <listViews>
+        <fullName>mine</fullName>
+        <columns>Name</columns>
+        <columns>Balance</columns>
+        <columns>ReferenceEntity</columns>
+        <columns>TransactionDate</columns>
+        <columns>EffectiveDate</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Finance Balance Snapshots</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Account</customTabListAdditionalFields>
         <customTabListAdditionalFields>ReferenceEntity</customTabListAdditionalFields>

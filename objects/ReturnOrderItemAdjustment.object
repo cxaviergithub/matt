@@ -140,6 +140,13 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ReturnOrderLineItemId</fullName>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>TotalAmtWithTax</fullName>
+    </fields>
+    <fields>
         <fullName>TotalTaxAmount</fullName>
     </fields>
     <sharingModel>ControlledByParent</sharingModel>

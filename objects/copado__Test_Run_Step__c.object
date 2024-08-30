@@ -155,6 +155,16 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>copado__TestRunExecutionFieldSet</fullName>
+        <description>In use on ExecuteTestRun.page for client org&apos;s custom fields and Actual Result field on Test Run Step object.</description>
+        <displayedFields>
+            <field>copado__Actual_Result__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>TestRunExecutionFieldSet</label>
+    </fieldSets>
     <fields>
         <fullName>copado__Action_Description__c</fullName>
         <deprecated>false</deprecated>
@@ -271,7 +281,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Test Run Steps</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

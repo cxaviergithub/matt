@@ -204,12 +204,34 @@
         <unique>false</unique>
     </fields>
     <label>Compliance Finding</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Compliance_Rule__c</columns>
+        <columns>copado__Compliance_Scan_Result__c</columns>
+        <columns>copado__Severity__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>CF-{000000000}</displayFormat>
         <label>Compliance Finding Reference</label>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Compliance Findings</pluralLabel>
+    <recordTypes>
+        <fullName>copado__Copado</fullName>
+        <active>true</active>
+        <description>This record type is used for scan findings produced by Copado.</description>
+        <label>Copado</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__Other</fullName>
+        <active>true</active>
+        <description>Use this record type to capture non-Salesforce scan findings.</description>
+        <label>Other</label>
+    </recordTypes>
     <searchLayouts>
         <customTabListAdditionalFields>copado__Compliance_Rule__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>copado__Compliance_Scan_Result__c</customTabListAdditionalFields>

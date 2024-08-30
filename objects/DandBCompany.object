@@ -193,10 +193,16 @@
         <fullName>IncludedInSnP500</fullName>
     </fields>
     <fields>
+        <fullName>Latitude</fullName>
+    </fields>
+    <fields>
         <fullName>LegalStatus</fullName>
     </fields>
     <fields>
         <fullName>LocationStatus</fullName>
+    </fields>
+    <fields>
+        <fullName>Longitude</fullName>
     </fields>
     <fields>
         <fullName>MarketingPreScreen</fullName>

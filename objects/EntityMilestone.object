@@ -98,6 +98,11 @@
         <fullName>IsViolated</fullName>
     </fields>
     <fields>
+        <fullName>MilestoneId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ParentEntityId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

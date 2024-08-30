@@ -7,11 +7,23 @@
         <fullName>Amount</fullName>
     </fields>
     <fields>
+        <fullName>CampaignName</fullName>
+    </fields>
+    <fields>
+        <fullName>CouponName</fullName>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
     </fields>
     <fields>
         <fullName>FulfillmentOrderLineItemId</fullName>
         <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>PromotionName</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalAmtWithTax</fullName>
     </fields>
     <fields>
         <fullName>TotalTaxAmount</fullName>

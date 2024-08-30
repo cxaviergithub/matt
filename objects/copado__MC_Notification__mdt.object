@@ -48,6 +48,17 @@
         <visibleLines>3</visibleLines>
     </fields>
     <label>MC Notification</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>copado__Active__c</columns>
+        <columns>copado__Subject__c</columns>
+        <columns>copado__Template__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <pluralLabel>MC Notifications</pluralLabel>
     <visibility>Public</visibility>
 </CustomObject>

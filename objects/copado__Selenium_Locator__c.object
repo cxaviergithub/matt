@@ -201,6 +201,16 @@ Copado Recorder will automatically set the page title when recording.</inlineHel
         <visibleLines>3</visibleLines>
     </fields>
     <label>Selenium Locator</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Page__c</columns>
+        <columns>copado__Locator__c</columns>
+        <columns>copado__Locator_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
     <nameField>
         <displayFormat>SL-{00000}</displayFormat>
         <label>Selenium Locator Name</label>

@@ -140,6 +140,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>DetailAuthorizationFormText</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>FullAuthorizationFormUrl</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -154,6 +158,11 @@
         <fullName>SummaryAuthFormText</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_AuthorizationFormText</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Authorization Form Text</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>AuthorizationForm</customTabListAdditionalFields>
         <customTabListAdditionalFields>SummaryAuthFormText</customTabListAdditionalFields>

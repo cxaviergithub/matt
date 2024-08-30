@@ -102,11 +102,30 @@
         <fullName>ClosedDate</fullName>
     </fields>
     <fields>
+        <fullName>FulfilledFromLocationId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FulfilledToEmailAddress</fullName>
+    </fields>
+    <fields>
+        <fullName>FulfilledToName</fullName>
+    </fields>
+    <fields>
+        <fullName>FulfilledToPhone</fullName>
+    </fields>
+    <fields>
         <fullName>GrandTotalAmount</fullName>
     </fields>
     <fields>
         <fullName>InvoiceId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsReship</fullName>
+    </fields>
+    <fields>
+        <fullName>IsSuspended</fullName>
     </fields>
     <fields>
         <fullName>ItemCount</fullName>
@@ -120,6 +139,9 @@
     </fields>
     <fields>
         <fullName>TotalAdjustmentAmount</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalAdjustmentAmtWithTax</fullName>
     </fields>
     <fields>
         <fullName>TotalAdjustmentTaxAmount</fullName>
@@ -161,6 +183,16 @@
         <fullName>Type</fullName>
         <type>Picklist</type>
     </fields>
+    <listViews>
+        <fullName>all_fulfillment_orders</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>IsArchived</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Fulfillment Orders</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Status</customTabListAdditionalFields>
         <customTabListAdditionalFields>FulfilledToName</customTabListAdditionalFields>

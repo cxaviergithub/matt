@@ -142,6 +142,16 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Quality_Gate_Rule_Condition</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Quality_Gate_Rule_Condition</fullName>
+        <fields>copado__Quality_Gate_Rule__c</fields>
+        <fields>copado__Tool__c</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Platform__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Environment__c</fields>
+        <label>Quality Gate Rule Condition</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -366,8 +376,37 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Quality Gate Rule Conditions</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <startsWith>Vowel</startsWith>
+    <validationRules>
+        <fullName>copado__ConsistentPlatform</fullName>
+        <active>true</active>
+        <description>Validates the selected platform and the platform of the environment/pipeline matches.</description>
+        <errorConditionFormula>OR(
+  (
+    AND(
+      NOT(ISBLANK(TEXT(copado__Platform__c))), 
+      NOT(ISBLANK(copado__Pipeline__c)), 
+      TEXT(copado__Platform__c) != TEXT(copado__Pipeline__r.copado__Platform__c)
+    )
+  ), 
+  (
+    AND(
+      NOT(ISBLANK(TEXT(copado__Platform__c))), 
+      NOT(ISBLANK(copado__Environment__c)), 
+      TEXT(copado__Platform__c) != TEXT(copado__Environment__r.copado__Platform__c)
+    )
+  ), 
+  (
+    AND(
+      NOT(ISBLANK(copado__Environment__c)), 
+      NOT(ISBLANK(copado__Pipeline__c)), 
+      TEXT(copado__Environment__r.copado__Platform__c) != TEXT(copado__Pipeline__r.copado__Platform__c)
+    )
+  )
+)</errorConditionFormula>
+        <errorMessage>The selected platform does not match the chosen pipeline or environment platform value.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

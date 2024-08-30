@@ -127,6 +127,10 @@
         <fullName>IsViolated</fullName>
     </fields>
     <fields>
+        <fullName>MilestoneId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>SlaProcessId</fullName>
         <type>Lookup</type>
     </fields>

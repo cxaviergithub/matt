@@ -328,7 +328,47 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>User Persona Assignments</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__Permanent_no_Dates</fullName>
+        <active>true</active>
+        <errorConditionFormula>and (
+ ISPICKVAL( copado__Type__c ,&quot;Permanent&quot;),
+  or (
+    not( ISNULL( copado__End_Time__c ) ),
+    not( ISNULL( copado__Start_Time__c  ) )
+  )
+)</errorConditionFormula>
+        <errorDisplayField>copado__Type__c</errorDisplayField>
+        <errorMessage>Cannot  specify End and Start time for Permanent permissions.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Start_End_date_illogicalness</fullName>
+        <active>true</active>
+        <description>If current user sets start date less than the end date, then the rule&apos;s error message will appear on the top of the page.</description>
+        <errorConditionFormula>IF( copado__Start_Time__c &gt;  copado__End_Time__c ,true, false)</errorConditionFormula>
+        <errorMessage>Start Time cannot be after the End Time.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Start_date_issue</fullName>
+        <active>true</active>
+        <description>If either start date or end date is set less than current datetime, the rule&apos;s error message will appear on the top of the page.</description>
+        <errorConditionFormula>If( OR(copado__Start_Time__c &lt;  NOW() , copado__End_Time__c &lt; NOW()),true,false )</errorConditionFormula>
+        <errorMessage>Start Time or End Time cannot be in the past. Please add a couple of minutes to related field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Temporary_with_Dates</fullName>
+        <active>true</active>
+        <errorConditionFormula>and (
+ ISPICKVAL( copado__Type__c ,&quot;Temporary&quot;),
+  or (
+   ISNULL( copado__End_Time__c ),
+   ISNULL( copado__Start_Time__c  )
+  )
+)</errorConditionFormula>
+        <errorDisplayField>copado__Type__c</errorDisplayField>
+        <errorMessage>Specify End and Start time for Temporary permissions.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

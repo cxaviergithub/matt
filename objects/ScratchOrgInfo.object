@@ -118,6 +118,10 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>Country</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
         <fullName>DeletedBy</fullName>
         <trackHistory>true</trackHistory>
     </fields>
@@ -143,6 +147,10 @@
     </fields>
     <fields>
         <fullName>Features</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Instance</fullName>
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
@@ -178,6 +186,10 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
+        <fullName>SignupCountry</fullName>
+        <trackHistory>true</trackHistory>
+    </fields>
+    <fields>
         <fullName>SignupEmail</fullName>
         <trackHistory>true</trackHistory>
     </fields>
@@ -209,5 +221,15 @@
         <fullName>Username</fullName>
         <trackHistory>true</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_Scratch_Org_Infos</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Scratch Org Infos</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Scratch_Org_Infos</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Scratch Org Infos</label>
+    </listViews>
     <sharingModel>Private</sharingModel>
 </CustomObject>

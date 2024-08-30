@@ -146,6 +146,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ShippingAreaType</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>ShippingCarrierId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>

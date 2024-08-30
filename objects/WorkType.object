@@ -135,9 +135,34 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>ApptStartTimeIntvlInMin</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>AttendeeLimit</fullName>
         <inlineHelpText>Enter the maximum number of service appointment attendees that can attend a group service appointment. This field is mandatory if the appointment category is group.</inlineHelpText>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeAfterAppointment</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeAfterUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeBeforeAppointment</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>BlockTimeBeforeUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>DefaultAppointmentType</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -145,6 +170,10 @@
     </fields>
     <fields>
         <fullName>DurationType</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>EstimatedDuration</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
@@ -161,6 +190,32 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <fields>
+        <fullName>TimeFrameEndUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TimeFrameStartUnit</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TimeframeEnd</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>TimeframeStart</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <listViews>
+        <fullName>All_WorkTypes</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Work Types</label>
+    </listViews>
+    <listViews>
+        <fullName>My_WorkTypes</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Work Types</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>EstimatedDuration</customTabListAdditionalFields>
         <customTabListAdditionalFields>DurationType</customTabListAdditionalFields>

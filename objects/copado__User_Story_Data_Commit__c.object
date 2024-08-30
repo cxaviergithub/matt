@@ -229,7 +229,51 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>User Story Data Commits</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>copado__Prevent_change_Commit_Date</fullName>
+        <active>true</active>
+        <description>This validation rule prevents the user from changing the Commit Date field once the record has been created.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(copado__Commit_Date__c)
+)</errorConditionFormula>
+        <errorDisplayField>copado__Commit_Date__c</errorDisplayField>
+        <errorMessage>It is not allowed to change the Commit Date once the User Story Data Commit has been created. Please create a new User Story Data Commit.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Prevent_change_Commit_Message</fullName>
+        <active>true</active>
+        <description>This validation rule prevents the user from changing the Commit Message field once the record has been created.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(copado__Commit_Message__c)
+)</errorConditionFormula>
+        <errorDisplayField>copado__Commit_Message__c</errorDisplayField>
+        <errorMessage>It is not allowed to change the Commit Message once the User Story Data Commit has been created. Please create a new User Story Data Commit.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Prevent_change_Data_Set</fullName>
+        <active>true</active>
+        <description>This validation rule prevents the user from changing the Data Set field once the record has been created.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(copado__Data_Set__c)
+)</errorConditionFormula>
+        <errorDisplayField>copado__Data_Set__c</errorDisplayField>
+        <errorMessage>It is not allowed to change the Data Set once the User Story Data Commit has been created. Please create a new User Story Data Commit.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>copado__Prevent_change_Execution_Job</fullName>
+        <active>true</active>
+        <description>This validation rule prevents the user from changing the Execution Job field once the record has been created.</description>
+        <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED(copado__Execution_Job__c)
+)</errorConditionFormula>
+        <errorDisplayField>copado__Execution_Job__c</errorDisplayField>
+        <errorMessage>It is not allowed to change the Execution Job once the User Story Data Commit has been created. Please create a new  User Story Data Commit.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

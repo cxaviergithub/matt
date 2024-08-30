@@ -142,6 +142,15 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Quality_Gate_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Quality_Gate_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Type__c</fields>
+        <fields>copado__Metadata_Group__c</fields>
+        <fields>copado__Execution_Sequence__c</fields>
+        <fields>copado__Automation_Template__c</fields>
+        <label>Quality Gate Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -372,7 +381,7 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Automations</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

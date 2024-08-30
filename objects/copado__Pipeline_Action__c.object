@@ -142,6 +142,17 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Pipeline_Actions_Default</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Pipeline_Actions_Default</fullName>
+        <fields>Name</fields>
+        <fields>copado__Action__c</fields>
+        <fields>copado__Job_Template__c</fields>
+        <fields>copado__Platform__c</fields>
+        <fields>copado__Pipeline__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__Default__c</fields>
+        <label>Pipeline Actions Default</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -255,7 +266,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Pipeline Actions</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -582,6 +582,19 @@
         <type>Summary</type>
     </fields>
     <label>Static Code Analysis Result</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Number_of_Violations__c</columns>
+        <columns>copado__Score_v11__c</columns>
+        <columns>copado__User_Story__c</columns>
+        <columns>copado__Org_Credential__c</columns>
+        <columns>copado__Deployment_Step__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>SCA-{00000}</displayFormat>
         <label>Static Code Analysis Result Name</label>
@@ -590,7 +603,19 @@
     </nameField>
     <pluralLabel>Static Code Analysis Results</pluralLabel>
     <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <searchLayouts />
+    <recordTypes>
+        <fullName>copado__CodeScan</fullName>
+        <active>true</active>
+        <description>Record Type for CodeScan integration. Requires CodeScan licensing.</description>
+        <label>CodeScan</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__PMD</fullName>
+        <active>true</active>
+        <description>Record Type for free of charge PMD integration</description>
+        <label>PMD</label>
+    </recordTypes>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

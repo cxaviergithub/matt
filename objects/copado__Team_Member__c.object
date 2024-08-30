@@ -361,6 +361,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <label>Team Member</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>TM-{0000}</displayFormat>
         <label>Team Member Name</label>

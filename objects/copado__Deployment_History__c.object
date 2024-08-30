@@ -303,7 +303,7 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Copado Deployment History</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

@@ -155,6 +155,18 @@
         <fullName>SortOrder</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_Product_Categories_List_View</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Categories</label>
+    </listViews>
+    <listViews>
+        <fullName>Org_ProductCategory_Hierarchy</fullName>
+        <columns>Name</columns>
+        <columns>IsNavigational</columns>
+        <filterScope>Everything</filterScope>
+        <label>Category Hierarchies</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Catalog</customTabListAdditionalFields>
         <customTabListAdditionalFields>ParentCategory</customTabListAdditionalFields>

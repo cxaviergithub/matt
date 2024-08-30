@@ -142,6 +142,16 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Quality_Gate_Rule_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Quality_Gate_Rule_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Tool__c</fields>
+        <fields>copado__Type__c</fields>
+        <fields>copado__Execution_sequence__c</fields>
+        <fields>copado__ActionsList__c</fields>
+        <fields>copado__Status__c</fields>
+        <label>Quality Gate Rule Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -313,6 +323,18 @@ IF(INCLUDES(copado__Actions__c , &quot;PackageDistribution&quot; ), &quot;Packag
         <visibleLines>3</visibleLines>
     </fields>
     <label>Quality Gate Rule</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Type__c</columns>
+        <columns>copado__Tool__c</columns>
+        <columns>copado__Execution_sequence__c</columns>
+        <columns>copado__Actions__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Quality Gate Rule Name</label>
         <trackHistory>false</trackHistory>

@@ -180,12 +180,17 @@
         <unique>false</unique>
     </fields>
     <label>Salesforce Org</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Salesforce Org Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Salesforce Orgs</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

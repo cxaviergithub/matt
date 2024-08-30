@@ -142,6 +142,17 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__TestHighlightPanel</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__TestHighlightPanel</fullName>
+        <fields>Name</fields>
+        <fields>copado__ExtensionConfiguration__c</fields>
+        <fields>copado__Type__c</fields>
+        <fields>copado__User_Story__c</fields>
+        <fields>copado__Reference__c</fields>
+        <fields>LastModifiedById</fields>
+        <fields>copado__Latest_Result_Status__c</fields>
+        <label>Test Highlight Panel</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>Copado Object to spin a test scenario</description>
@@ -472,12 +483,32 @@
         <type>Lookup</type>
     </fields>
     <label>Test</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>copado__Reference__c</columns>
+        <columns>NAME</columns>
+        <columns>copado__Category__c</columns>
+        <columns>copado__Tool__c</columns>
+        <columns>copado__User_Story__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Tests</pluralLabel>
-    <searchLayouts />
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__PreventUpdatingToolConfiguration</fullName>
+        <active>true</active>
+        <description>This rule prevents users from modifying the Tool Configuration after the test is created.</description>
+        <errorConditionFormula>AND( NOT( ISNEW() ) ,
+ ISCHANGED( copado__ExtensionConfiguration__c ) )</errorConditionFormula>
+        <errorMessage>This Tool Configuration cannot be modified. Please create a new Test and select the Tool Configuration needed.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

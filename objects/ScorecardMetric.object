@@ -139,5 +139,13 @@
     <fields>
         <fullName>Name</fullName>
     </fields>
+    <fields>
+        <fullName>ReportId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ScorecardId</fullName>
+        <type>MasterDetail</type>
+    </fields>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

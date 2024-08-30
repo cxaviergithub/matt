@@ -141,10 +141,30 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>PreferredTimeEnd</fullName>
+        <inlineHelpText>End of the preferred time span in which to reach the contact point.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>PreferredTimeStart</fullName>
+        <inlineHelpText>Start of the preferred time span in which to reach the contact point.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>PreferredTimeZone</fullName>
+        <inlineHelpText>Time zone of the preferred time span.</inlineHelpText>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Unit</fullName>
         <inlineHelpText>The unit of time that works with Offset to determine the communication timing.</inlineHelpText>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_CommSubscriptionTimings</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Communication Subscription Timings</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Unit</customTabListAdditionalFields>
         <customTabListAdditionalFields>Offset</customTabListAdditionalFields>

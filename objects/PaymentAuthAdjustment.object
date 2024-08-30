@@ -135,7 +135,38 @@
         <fullName>Email</fullName>
     </fields>
     <fields>
+        <fullName>GatewayDate</fullName>
+    </fields>
+    <fields>
+        <fullName>GatewayRefDetails</fullName>
+    </fields>
+    <fields>
+        <fullName>GatewayRefNumber</fullName>
+    </fields>
+    <fields>
+        <fullName>GatewayResultCode</fullName>
+    </fields>
+    <fields>
+        <fullName>GatewayResultCodeDescription</fullName>
+    </fields>
+    <fields>
+        <fullName>IpAddress</fullName>
+    </fields>
+    <fields>
+        <fullName>MacAddress</fullName>
+    </fields>
+    <fields>
+        <fullName>PaymentAuthorizationId</fullName>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
         <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>ProcessingMode</fullName>
+    </fields>
+    <fields>
+        <fullName>SfResultCode</fullName>
     </fields>
     <fields>
         <fullName>Status</fullName>
@@ -143,5 +174,10 @@
     <fields>
         <fullName>Type</fullName>
     </fields>
+    <listViews>
+        <fullName>PaymentAuthAdjustment</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

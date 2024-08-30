@@ -134,6 +134,14 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>ConstructionEndDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>ConstructionStartDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackHistory>false</trackHistory>
     </fields>
@@ -158,6 +166,10 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>LocationLevel</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>LocationType</fullName>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
@@ -172,9 +184,30 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>OpenDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>OwnerId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentLocationId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>PossessionDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RemodelEndDate</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>RemodelStartDate</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>RootLocationId</fullName>
@@ -188,6 +221,11 @@
     <fields>
         <fullName>TimeZone</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>VisitorAddressId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <searchLayouts>
         <customTabListAdditionalFields>LocationType</customTabListAdditionalFields>

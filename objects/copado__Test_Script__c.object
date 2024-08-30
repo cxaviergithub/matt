@@ -345,6 +345,17 @@
         <type>Lookup</type>
     </fields>
     <label>Test Script</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Test_Title__c</columns>
+        <columns>copado__Org__c</columns>
+        <columns>copado__Project__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__User_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>TS-{00000}</displayFormat>
         <label>Test Script Name</label>
@@ -377,4 +388,15 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Add_Test_Script_Steps</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Add Test Script Steps</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/{!IF(CONTAINS($Action.copado__User_Story__c.New, &apos;copado__&apos;), &apos;copado__&apos;, &apos;&apos;)}CreateTestScriptSteps?tId={!copado__Test_Script__c.Id}</url>
+    </webLinks>
 </CustomObject>

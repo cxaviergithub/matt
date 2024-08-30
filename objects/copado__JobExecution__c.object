@@ -142,6 +142,14 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Job_Execution</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Job_Execution</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Template__c</fields>
+        <fields>copado__Context__c</fields>
+        <label>Job Execution</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>A job execution is a representation of a job template execution at a given point in time.</description>
@@ -416,6 +424,17 @@
         <visibleLines>3</visibleLines>
     </fields>
     <label>Job Execution</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Template__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Source__c</columns>
+        <columns>copado__Destination__c</columns>
+        <columns>copado__ErrorMessage__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>JE-{000}</displayFormat>
         <label>Job Execution Name</label>

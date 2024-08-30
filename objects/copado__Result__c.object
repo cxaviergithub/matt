@@ -142,6 +142,13 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Result</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Result</fullName>
+        <fields>Name</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Parent__c</fields>
+        <label>Result</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <description>A unified place to look for job results when working with automations such as functions or Salesforce flows.</description>
@@ -597,6 +604,20 @@
         <type>Lookup</type>
     </fields>
     <label>Result</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Job_Type__c</columns>
+        <columns>copado__Status__c</columns>
+        <columns>copado__Link__c</columns>
+        <columns>copado__Description__c</columns>
+        <columns>copado__Error_Message__c</columns>
+        <columns>copado__Error_Code__c</columns>
+        <columns>copado__Job_Id__c</columns>
+        <columns>copado__User_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <displayFormat>R{00000}</displayFormat>
         <label>Result Name</label>

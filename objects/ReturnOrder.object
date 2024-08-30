@@ -262,6 +262,16 @@
         <fullName>TotalTaxAmount</fullName>
         <trackHistory>false</trackHistory>
     </fields>
+    <listViews>
+        <fullName>All_ReturnOrders</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Return Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>My_ReturnOrders</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Return Orders</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Account</customTabListAdditionalFields>
         <customTabListAdditionalFields>Contact</customTabListAdditionalFields>

@@ -142,6 +142,14 @@
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>copado__Data_Template_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>copado__Data_Template_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>copado__Template_Source_Org__c</fields>
+        <fields>copado__Main_Object__c</fields>
+        <fields>copado__Active__c</fields>
+        <label>Data Template Compact Layout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
@@ -317,6 +325,18 @@
         <type>Lookup</type>
     </fields>
     <label>Data Template</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <columns>NAME</columns>
+        <columns>copado__Active__c</columns>
+        <columns>copado__Main_Object__c</columns>
+        <columns>copado__Template_Source_Org__c</columns>
+        <columns>copado__Max_Record_Limit__c</columns>
+        <columns>copado__Batch_Size__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Data Template Name</label>
         <type>Text</type>
@@ -346,4 +366,16 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Import_Templates</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Import Templates</masterLabel>
+        <openType>sidebar</openType>
+        <page>copado__DataTemplateImport</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
 </CustomObject>

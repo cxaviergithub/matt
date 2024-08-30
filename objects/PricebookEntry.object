@@ -158,7 +158,14 @@
         <fullName>ProductCode</fullName>
     </fields>
     <fields>
+        <fullName>StandardPrice</fullName>
+    </fields>
+    <fields>
         <fullName>UnitPrice</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>UseStandardPrice</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <searchLayouts>

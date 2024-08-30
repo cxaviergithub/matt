@@ -132,6 +132,16 @@
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
+    <listViews>
+        <fullName>All_Waitlists</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All Waitlists</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Waitlists</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Waitlists</label>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>ServiceTerritory</customTabListAdditionalFields>
         <customTabListAdditionalFields>IsActive</customTabListAdditionalFields>

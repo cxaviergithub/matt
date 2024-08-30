@@ -224,12 +224,71 @@ On-premise SonarQube requires your SonarQube instance to be accesible through in
         <type>Checkbox</type>
     </fields>
     <label>Static Code Analysis Settings</label>
+    <listViews>
+        <fullName>copado__All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Static Code Analysis Settings Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Static Code Analysis Settings</pluralLabel>
-    <searchLayouts />
+    <recordTypes>
+        <fullName>copado__CodeScan</fullName>
+        <active>true</active>
+        <description>Record Type for CodeScan integration. Requires CodeScan licensing.</description>
+        <label>CodeScan</label>
+        <picklistValues>
+            <picklist>copado__CodeScan_Version__c</picklist>
+            <values>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-premise SonarQube</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>copado__PMD</fullName>
+        <active>true</active>
+        <description>Record Type for free of charge PMD integration</description>
+        <label>PMD</label>
+        <picklistValues>
+            <picklist>copado__CodeScan_Version__c</picklist>
+            <values>
+                <fullName>Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>On-premise SonarQube</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>copado__CodeScan_Required_Fields</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF (ISPICKVAL( copado__CodeScan_Version__c, &apos;Cloud&apos;),
+            ISBLANK( copado__Cloud_Organization__c ), 
+            FALSE )</errorConditionFormula>
+        <errorMessage>Review the following required fields:
+Cloud Organization is required for Cloud Version.
+SonarQube Token and URL are required for On-premise Version.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
+    <webLinks>
+        <fullName>copado__Generate_Default_RuleSet</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Generate Default RuleSet</masterLabel>
+        <openType>replace</openType>
+        <page>copado__GenerateStaticCodeAnalysisRuleSet</page>
+        <protected>false</protected>
+    </webLinks>
 </CustomObject>

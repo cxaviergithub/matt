@@ -80,10 +80,25 @@
         <fullName>EventIdentifier</fullName>
     </fields>
     <fields>
+        <fullName>RequestedEntities</fullName>
+    </fields>
+    <fields>
         <fullName>Score</fullName>
     </fields>
     <fields>
+        <fullName>SoqlCommands</fullName>
+    </fields>
+    <fields>
         <fullName>SourceIp</fullName>
+    </fields>
+    <fields>
+        <fullName>Summary</fullName>
+    </fields>
+    <fields>
+        <fullName>TotalControllerEvents</fullName>
+    </fields>
+    <fields>
+        <fullName>UserAgent</fullName>
     </fields>
     <fields>
         <fullName>UserId</fullName>

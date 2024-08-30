@@ -77,6 +77,10 @@
         <fullName>Label</fullName>
     </fields>
     <fields>
+        <fullName>OrchestrationInstanceId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Status</fullName>
     </fields>
     <sharingModel>Private</sharingModel>

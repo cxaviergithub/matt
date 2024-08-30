@@ -66,6 +66,9 @@
         <fullName>Name</fullName>
     </fields>
     <fields>
+        <fullName>RunFrequency</fullName>
+    </fields>
+    <fields>
         <fullName>Status</fullName>
     </fields>
     <fields>

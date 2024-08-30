@@ -36,6 +36,9 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>State</fullName>
+    </fields>
+    <fields>
         <fullName>UserProvAccountId</fullName>
         <type>Lookup</type>
     </fields>
