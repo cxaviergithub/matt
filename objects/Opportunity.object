@@ -144,7 +144,15 @@
         <fullName>Testprocess</fullName>
         <isActive>true</isActive>
         <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Needs Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation%2FReview</fullName>
             <default>false</default>
         </values>
         <values>
